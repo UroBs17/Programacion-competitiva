@@ -9,17 +9,16 @@ public class uva_195 {
 		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
 		int cases=Integer.parseInt(br.readLine());
 		for(int i=0;i<cases;i++) {
-			
 			List<Character> word=new ArrayList<Character>();
 			for(Character ch:br.readLine().toCharArray()) {
 				word.add(ch);
 			}
 			Collections.sort(word,new Comparator<Character>() {
-		         @Override
-		         public int compare(Character o1, Character o2) {
-		        	 return initialOrder.indexOf(o1) - initialOrder.indexOf(o2);
-		         }
-		    });
+				@Override
+				public int compare(Character o1, Character o2) {
+					return initialOrder.indexOf(o1) - initialOrder.indexOf(o2);
+				}
+			});
 			vi=new boolean[word.size()];
 			sb=new StringBuilder("");
 			is=new HashMap<>();
