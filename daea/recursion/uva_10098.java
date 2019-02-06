@@ -1,31 +1,39 @@
 import java.io.*;
 import java.util.*;
-public class uva_10098 {
-	static boolean[] vi;
-	static ArrayList<Character> rta;
+
+class uva_10098{
+	
+	public static HashMap<String,Boolean> isGen;
+	public static StringBuilder toDis;
+	
 	public static void main(String[] args) throws Exception {
-		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
-		int k=Integer.parseInt(br.readLine());
-		for(int p=0;p<k;p++) {
-			char[] word=br.readLine().toCharArray();
-			vi=new boolean[word.length];
-			rta=new ArrayList<Character>();
-			Arrays.sort(word);
-			solve(word,0);
-		}
-	}
-	public static void solve(char[]word,int i) {
-		if(rta.size()==word.length) {
-			for(int iii=0;iii<rta.size();iii++)System.out.print(rta.get(iii));
-			System.out.println();
-		}
-		for(int ii=0;ii<word.length;ii++) {
-			if(!vi[ii]) {
-				vi[ii]=true;
-				rta.add(word[ii]);
-				solve(word,ii);
-				vi[ii]=false;
-				rta.remove(rta.size()-1);
+    	BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+    	int cases=Integer.parseInt(br.readLine());
+    	for (int i=0;i<cases;i++) {
+    		char [] c=br.readLine().toCharArray();
+    		Arrays.sort(c);
+    		isGen=new HashMap<>();
+    		toDis=new StringBuilder();
+    		permutate(c,new boolean [c.length],"");
+    		System.out.println(toDis.toString());
+    	}
+    }
+	
+	public static void permutate (char [] c, boolean [] flag, String result) {
+		if (result.length()==c.length) {
+			toDis.append(result);
+			toDis.append("\n");
+		} else {
+			for (int i=0;i<c.length;i++) {
+				if (!flag[i]) {
+					String s=result+c[i];
+					if (isGen.get(s)==null) {
+						flag[i]=true;
+						isGen.put(s, true);
+						permutate(c,flag,s);
+						flag[i]=false;
+					}
+				}
 			}
 		}
 	}
