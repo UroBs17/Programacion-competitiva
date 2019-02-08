@@ -24,6 +24,6 @@ def fi(n):
     return 6*(2**n)
 flag=True
 for i in range(1000):
-    flag=fr(i)==fi(i)
+    flag=flag and fr(i)==fi(i)
 print(flag)
     
