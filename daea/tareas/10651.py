@@ -1,15 +1,15 @@
 from sys import stdin
 dic={}
 def solve(line):
-    temp=line
+    temp="".join(line)
     if temp in dic:
         return dic[temp]
-    currNum=count(temp)
+    currNum=line.count("o")
     if currNum<=1:
         dic[temp]=currNum
         return currNum
     for i in range(12):
-        if (1<<i)&temp==0:
+        if line[i]=="-":
             continue
         if i-2>=0:
             if line[i-2]=="-" and line[i-1]=="o":
@@ -30,16 +30,10 @@ def solve(line):
     dic[temp]=currNum
     return currNum
 
-def count(num):
-    return 0
 def main():
     n=int(stdin.readline().strip())
     for k in range(n):
-        line=stdin.readline().strip()
-        num=line.replace("o","1")
-        num=num.replace("-","0")
-        num=int(num,2)
+        line=list(stdin.readline().strip())
         dic={}
-        print(solve(num))
+        print(solve(line))
 main()
-

@@ -1,0 +1,26 @@
+SRM 157 DIV2	Guess The Number
+SRM 174 DIV1	Birthday Odds
+SRM 188 DIV1	Percents
+SRM 338 DIV1	Improving Statistics
+SRM 421 DIV1	Equilibrium Points
+TCHS SRM 15	Numbers Line
+SRM 346 DIV1	Height Round
+SRM 370 DIV1	Connect The Cities
+SRM 380 DIV1	Compiling Decks With Jokers
+SRM 415 DIV1	Collecting Postmarks
+SRM 426 DIV1	Catch The Mice
+TCO07 Round 1C	Race Track
+SRM 170 DIV1	City Link
+SRM 187 DIV1	DNA Multi Matcher
+SRM 170 DIV1	Polynomials
+SRM 189 DIV2	Mortgage
+SRM 190 DIV1	Square Free
+SRM 339 DIV1	RPS Tournament
+SRM 345 DIV1	Byte Land
+SRM 367 DIV1	WSN Parents Assignment
+SRM 397 DIV1	House Protection
+SRM 405 DIV1	Reasonable Odds
+SRM 430 DIV1	Picking Up
+TCHS SRM 9	Products Matrix
+TCO07 Qual 1	Alarmed
+TCO08 Round 3	Super Watch
