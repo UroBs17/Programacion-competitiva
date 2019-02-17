@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="daea/inicio"/>
+	<classpathentry kind="src" path="daea/recursion"/>
+	<classpathentry kind="src" path="daea/tareas"/>
+	<classpathentry excluding="ecigma/uva ejercicios/" kind="src" path="programacion competitiva"/>
+	<classpathentry kind="src" path="programacion competitiva/ecigma/uva ejercicios"/>
+	<classpathentry kind="output" path="daea/bin"/>
+</classpath>
