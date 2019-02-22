@@ -52,6 +52,8 @@ public class uva_12442 {
 		}
 		out.close();
 		out.flush();
+		
+
 	}
 
 }
