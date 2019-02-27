@@ -1,0 +1,203 @@
+10646	What is the Card?	Adhoc
+10945	Mother Bear	Adhoc
+11507	Bender B. Rodríquez Problem	Adhoc
+11799	Horror Dash	Adhoc
+11844	The Melding Plague	Adhoc
+136	Ugly Numbers	Arithmetic
+498	Polly the Polynomial	Arithmetic
+10523	Very Easy!!!	Arithmetic: arbitrary prec.
+10925	Krakovia	Arithmetic: arbitrary prec.
+10407	Simple Division	Arithmetic: GCD/LCM
+543	Goldbach's Conjecture	Arithmetic: primes
+10140	Prime Distance	Arithmetic: primes
+10394	Twin Primes	Arithmetic: primes
+10699	Count the Factors	Arithmetic: sieve
+10783	Riemman vs Mertens	Arithmetic: sieve
+624	CD	Backtracking
+750	8 Queens Chess Problem	Backtracking
+10576	Y2K Accounting Bug	Backtracking
+11085	Back to the 8-Queens	Backtracking
+12782	Magic Squares	Backtracking
+558	Wormholes	Bellmand-Ford-Moore
+10557	XYZZY	Bellmand-Ford-Moore
+383	Shipping Routes	BFS
+532	Dungeon Master	BFS
+762	We Ship Cheap	BFS
+10004	Bicoloring	BFS
+10150	Knights in FEN	BFS
+10653	Bombs! NO they are Mines	BFS
+11080	Place the Guards	BFS
+11513	9 Puzzle	BFS
+424	Integer Inquiry	BigInt
+10106	Product	BigInt
+10814	Simplifying Fractions	BigInt
+907	Winterim Backpacking Trip	Bisection
+957	Popes	Bisection
+10077	The Stern-Brocot Number System	Bisection
+12032	The Monkey and the Oiled Bamboo	Bisection
+10264	The Most Potent Corner	Bit manipulation
+11173	Grey Codes	Bit manipulation
+12642	Tennis Rounds	Bit manipulation
+270	Lining Up	CG (basic)
+476	Pints in Figures: Rectangles	CG (basic)
+10195	The Knights of the Round Table	CG (basic)
+10432	Polygon Inside a Circle	CG (basic)
+10245	The Closest Pair Problem	CG: closest pair
+11378	Bey Battle	CG: closest pair
+1111	Trash Removal	CG: convex hull
+11096	Nails	CG: convex hull
+369	Combinations	Combinatorics
+941	Permutations	Combinatorics
+12316	Sewing Buttons With Grandma	Combinatorics
+154	Recycling	Complete search
+441	Lotto	Complete search
+11665	Chinese Ink	Computational Geometry
+109	SCUD Busters	Convex hull
+10065	Useless Tile Packers	Convex hull
+202	Repeating Decimals	Cycle Finding
+350	Pseudo-random Numbers	Cycle Finding
+10591	Happy Number	Cycle Finding
+315	Network	DFS (Art Points)
+796	Critical Links	DFS (Art Points)
+260	Il Gioco dell'X	DFS (Conn Comp)
+657	The die is cast	DFS (Conn Comp)
+11518	Dominos 2	DFS (Conn Comp)
+11504	Dominos	DFS (Str Conn Comp)
+11770	Lighting Away	DFS (Str Conn Comp)
+124	Following Orders	DFS (TopoSort)
+200	Rare Order	DFS (TopoSort)
+872	Ordering	DFS (TopoSort)
+714	Copying Books	Divide and Conquer
+10341	Solve it	Divide and Conquer
+10003	Cutting Sticks	DP
+10943	How Do You Add?	DP
+11450	Wedding Shopping	DP
+10364	Square	DP (Bitmask)
+10911	Forming Quiz Teams	DP (Bitmask)
+147	Dollars	DP (Coin)
+357	Let Me Count the Ways	DP (Coin)
+11517	Exact Change	DP (Coin)
+590	TV Game	DP (Graph)
+103	Stacking Boxes	DP (LIS)
+10534	Wavio Sequence	DP (LIS)
+10192	Vacation	DP (Strings)
+11151	Longest Palindrome	DP (Strings)
+12640	Largest Sum Game	DP (Sum)
+10306	e-Coins	DP: Coin Change
+108	Maximum Sum	DP: Kadane 2D
+10616	Divisible Group Sums	DP: Knapsack
+10664	Luggage	DP: Knapsack
+481	What Goes Up	DP: LIS
+11790	Murcia's Skyline	DP: LIS
+526	String Distance Transformation	DP: string edit distance
+1207	AGTC	DP: string edit distance
+10405	Longest Common Subsequence	DP: string edit distance
+10583	Ubiquitois Religions	DS (DSet)
+10608	Friends	DS (DSet)
+10226	Hardwood Species	DS (Map/Set)
+11136	Hoax or what	DS (Map/Set)
+11235	Frequent Values	DS (SegmentTree)
+11297	Census	DS (SegmentTree)
+127	Accordian Patience	DS (Stack)
+673	Parenthesis Balance	DS (Stack)
+599	The Forrest for the Trees	DS: Graphs
+11991	Easy Problem from Rujia Liu?	DS: Graphs
+11988	Broken Keyboard	DS: Lists
+1203	Argus	DS: Priority Queue
+10954	Add All	DS: Priority Queue
+10172	The Lonesome Cargo Distributor	DS: Queue
+11034	Ferry Loading IV	DS: Queue
+978	Lemming Battle!	DS: Set
+514	Rails	DS: Stack
+1062	Conainers	DS: Stack
+297	Quadtrees	DS: Trees
+11402	Ahoy, Pirates!	DS: Trees
+793	Network Connections	DS: Union Find
+11503	Virtual Friends	DS: Union Find
+12789	Space Invaders	DS: Union Find
+324	Factorial Frequencies	Factorial
+495	Fibonacci Freeze	Fibonacci
+763	Fibinary Numbers	Fibonacci
+10334	Ray Through Glasses	Fibonacci
+341	Non-Stop Travel	Floyd-Warshal
+534	Frogger	Floyd-Warshal
+821	Page Hopping	Floyd-Warshal
+10246	Asterix and Obelix	Floyd-Warshal
+530	Binomial Showdown	GCD/LCM
+10090	Marbles	GCD/LCM
+10717	Mint	GCD/LCM
+10005	Packing Polygons	Geometry
+10297	Beavergnaw	Geometry 3D
+104	Arbitrage	Graph: ASSP
+436	Arbitrage (II)	Graph: ASSP
+10171	Meeting Prof. Miguel	Graph: ASSP
+11463	Commandos	Graph: ASSP
+352	The Seasonal War	Graph: DFS
+1103	Ancient Messages	Graph: DFS
+11110	Equidivisions	Graph: DFS
+259	Software Allocation	Graph: Flow
+820	Internet Bandwidth	Graph: Flow
+11506	Angry Programmer	Graph: Flow
+1208	Oreon	Graph: MST
+1235	Anti Brute Force Lock	Graph: MST
+10034	Freckles	Graph: MST
+10369	Arctic Network	Graph: MST
+11631	Dark Roads	Graph: MST
+247	Calling Circles	Graph: SCC
+11838	Come and Go	Graph: SCC
+336	A Node Too Far	Graph: SSSP
+388	Galactic Import	Graph: SSSP
+929	Number Maze	Graph: SSSP
+1112	Mice and Maze	Graph: SSSP
+10187	From Dusk Till Dawn	Graph: SSSP
+10977	Enchanted Forest	Graph: SSSP
+10986	Sending Email	Graph: SSSP
+10305	Ordering Tasks	Graph: Toposort
+11060	Beverages	Graph: Toposort
+118	Mutant Flatworld Explorers	Graph: traversal
+10116	Robot Motion	Graph: traversal
+12645	Water Supply	Graphs
+410	Station Balance	Greedy
+10700	Camel Trading	Greedy
+11054	Wine Trading in Gergovia	Greedy
+11264	Coin Collector	Greedy
+11292	Dragon of Loowater	Greedy
+11369	Shopaholic	Greedy
+11389	The Bus Driver Problem	Greedy
+12210	A Match Making Problem	Greedy
+12405	Scarecrow	Greedy
+191	Intersection	Intersection
+10307	Killing Aliens in Borg	Kruskal
+719	Glass Beads	MLR
+374	Big Mod	Modulo Arith
+10176	Ocean Deep! - Make It Shallow!!	Modulo Arith
+10212	The Last Non-zero Digit	Modulo Arith
+10299	Relatives	Phi
+10539	Almost Prime Numbers	Primes
+10738	Rienman vs Martens	Primes
+193	Graph Coloring	Recursive backtracking
+10309	Turn the Lights Off	Recursive backtracking
+11581	Grid Succesors	Search
+1237	Expert Enough?	Search: 1D
+10976	Fractions Again?	Search: 1D
+1260	Sales	Search: 2D
+10487	Closest Sums	Search: 2D
+11242	Tour de France	Search: 2D
+735	Dart-a-Mania	Search: nD
+10102	The Path in the Colored Field	Search: nD
+299	Train Swapping	Sorting
+10327	Flip Sort	Sorting
+10810	Ultra-QuickSort	Sorting
+422	Word-Search Wonder	Strings
+902	Password Search	Strings
+11385	Da Vinci Code	Strings
+12315	The Starflyer Agents	Strings and Parsing
+10298	Power String	Strings: Matching
+11475	Extend to Palindrome	Strings: Matching
+11576	Scrolling Sign	Strings: Matching
+11888	Abnormal 89s	Strings: Matching
+12785	Emacs Plugin	Strings: Matching
+760	DNA Sequencing	Strings: Suffix Array
+11107	Life Forms	Strings: Suffix Array
+11512	GATTACA	Strings: Suffix Array
+
