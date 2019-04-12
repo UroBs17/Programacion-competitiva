@@ -1,76 +1,50 @@
 import java.util.*;
 import java.io.*;
 public class onionLayers {
-	private static class Point{
+	private static class Point implements Comparable<Point>{
         private int x, y, ind;
         public Point(int x, int y,int ind) {
             this.x = x;
             this.y = y;
             this.ind = ind;
         }
+		@Override
+		public int compareTo(Point other) {
+			if (x != other.x)return Double.compare(x, other.x);
+			else return Double.compare(y, other.y);
+    	}
     }
-    public static List<Point> getConvexHull(List<Point> points) {
-        List<Point> sorted = new ArrayList<Point>(getSortedPointSet(points));
-        Stack<Point> stack = new Stack<Point>();
-        stack.push(sorted.get(0));
-        stack.push(sorted.get(1));
-        for (int i = 2; i < sorted.size(); i++) {
-            Point head = sorted.get(i);
-            Point middle = stack.pop();
-            Point tail = stack.peek();
-            long crossProduct = (middle.x - tail.x) * (head.y - tail.y) - (middle.y - tail.y) * (head.x - tail.x);
-			if(crossProduct > 0) {
-                stack.push(middle);
-                stack.push(head);
+	public static int cross(Point q,Point r,Point p) {
+		return (q.x - r.x) * (p.y - r.y)-(q.y - r.y) * (p.x - r.x);
+	}
+	public static List<Point>  getConvexHull(List<Point> points){
+		List<Point> uH = new ArrayList<>();
+		Collections.sort(points);
+		for (Point p : points) {
+			while (uH.size() >= 2) {
+				Point q = uH.get(uH.size() - 1);
+				Point r = uH.get(uH.size() - 2);
+				if (cross(q,r,p) > 0)uH.remove(uH.size() - 1);//c(q,r,p)=0 collinear
+				else break;
 			}
-			else if(crossProduct < 0) {
-				i--;
+			uH.add(p);
+		}
+		uH.remove(uH.size() - 1);
+		List<Point> lH = new ArrayList<>();
+		for (int i = points.size() - 1; i >= 0; i--) {
+			Point p = points.get(i);
+			while (lH.size() >= 2) {
+				Point q = lH.get(lH.size() - 1);
+				Point r = lH.get(lH.size() - 2);
+				if (cross(q,r,p) > 0)lH.remove(lH.size() - 1);//c(q,r,p)=0 collinear
+				else break;
 			}
-			else {
-				stack.push(head);
-			}
-        }
-        stack.push(sorted.get(0));
-        return new ArrayList<Point>(stack);
-    }
-    protected static Point getLowestPoint(List<Point> points) {
-        Point lowest = points.get(0);
-        for(int i = 1; i < points.size(); i++) {
-            Point temp = points.get(i);
-            if(temp.y < lowest.y || (temp.y == lowest.y && temp.x < lowest.x)) {
-                lowest = temp;
-            }
-        }
-        return lowest;
-    }
-    protected static Set<Point> getSortedPointSet(List<Point> points) {
-        final Point lowest = getLowestPoint(points);
-        TreeSet<Point> set = new TreeSet<Point>(new Comparator<Point>() {
-            @Override
-            public int compare(Point a, Point b) {
-                if(a == b || a.equals(b)) return 0;
-                double thetaA = Math.atan2((long)a.y - lowest.y, (long)a.x - lowest.x);
-                double thetaB = Math.atan2((long)b.y - lowest.y, (long)b.x - lowest.x);
-                if(thetaA < thetaB) {
-                    return -1;
-                }
-                else if(thetaA > thetaB) {
-                    return 1;
-                }
-                else {
-                    double distanceA = Math.sqrt((((long)lowest.x - a.x) * ((long)lowest.x - a.x)) +
-                                                (((long)lowest.y - a.y) * ((long)lowest.y - a.y)));
-                    double distanceB = Math.sqrt((((long)lowest.x - b.x) * ((long)lowest.x - b.x)) +
-                                                (((long)lowest.y - b.y) * ((long)lowest.y - b.y)));
-
-                    if(distanceA < distanceB) return -1;
-                    else return 1;
-                }
-            }
-        });
-        set.addAll(points);
-        return set;
-    }
+			lH.add(p);
+		}
+		lH.remove(lH.size() - 1);
+		if (!(uH.size() == 1 && uH.equals(lH)))	uH.addAll(lH);
+		return uH;
+	}
     public static void main(String[] args) throws Exception{
     	BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
     	while(true) {
@@ -82,17 +56,18 @@ public class onionLayers {
     			int x=Integer.parseInt(stk.nextToken()),y=Integer.parseInt(stk.nextToken());
     			points.add(new Point(x,y,i));
     		}
-    		while(n>0) {
+    		boolean[] vi=new boolean[points.size()];
+    		int c=0;
+    		while(points.size()>0) {
     			List<Point> hull = getConvexHull(points);
+    			c++;
     			ArrayList<Point> p=new ArrayList<Point>();
-    			ArrayList<Integer> intk=new ArrayList<Integer>();
-    			for(Point pi:hull) {
-    				
-    			}
-    			n-=hull.size();
+    			for(Point pi:hull)vi[pi.ind]=true;
+    			for(Point pk:points)if (!vi[pk.ind])p.add(pk);
+    			points=p;
     		}
-    		
-    		
+    		if(c%2==1)System.out.println("Take this onion to the lab!");
+    		else System.out.println("Do not take this onion to the lab!");
     	}
     }
 }
