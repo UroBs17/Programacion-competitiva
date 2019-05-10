@@ -55,3 +55,5 @@ static int[] RA, tempRA, SA,tempSA, c,phi,LCP,PLCP;;
 		}
 		for(int i = 0; i < n; i++)
 			LCP[i] = PLCP[SA[i]];
+		
+	}
