@@ -1,10 +1,11 @@
-
-	static int[] RA, tempRA, SA,tempSA, c,phi,LCP,PLCP;;
+static int[] RA, tempRA, SA,tempSA, c,phi,LCP,PLCP;;
 	static int n;
 	static char[] T;
   static void radixSort(int k){
 		int sum,maxi = Math.max(n, 300);
 		c = new int[100010];
+		tempRA=new int[n];
+		tempSA=new int[n];
 		for(int i = 0; i < n; i++){
 			c[i+k<n ? RA[i+k] : 0]++;
 		}
@@ -21,6 +22,8 @@
  
 	static void buildSA(){
 		int r;
+		RA=new int[n];
+		SA=new int[n];
 		for(int i = 0; i < n; i++) RA[i] = T[i];
 		for(int  i = 0; i < n; i++) SA[i] = i;
 		for(int k = 1; k < n; k<<=1){
@@ -39,6 +42,8 @@
 		int L;
 		phi = new int[n];
 		phi[SA[0]] = -1;
+		LCP=new int[n];
+		PLCP=new int[n];
 		for(int i = 1; i < n; i++)
 			phi[SA[i]] = SA[i-1];
  
@@ -50,4 +55,3 @@
 		}
 		for(int i = 0; i < n; i++)
 			LCP[i] = PLCP[SA[i]];
-	}
