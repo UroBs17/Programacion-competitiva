@@ -4,14 +4,16 @@ int N=50000;
 public static void sieve() {
 	primes=new ArrayList<Integer>();
 	isPrime=new boolean[N];
-	for(int i=2;i<N;i++) {
-		if(!isPrime[i]) {
+	for(int i=2;i<N;i++)isPrime[i]=true;
+	for(long i=2;i<N;i++) {
+		if(isPrime[(int)i]) {
 			primes.add(i);
-			for(int j=i;j<N/i;j+=i) {
-				isPrime[j]=true;
+			for(long j=i*i;j<N;j+=i) {
+				isPrime[(int)j]=false;
 			}
 		}
-	}			
+	}	
+				
 }
 ----------------------------------------
 int gcd(int a,int b){return b==0? a:gcd(b,a%b);}
