@@ -1,3 +1,4 @@
+//AreaOfAnyPolygon = 1/2 * Σ (From i=0 to n-1) Xi * Yi+1 - Xi+1 + Yi
 public static boolean isInPolygon(Point p,List<Point> polygon){
 		int pos = 0, neg = 0;
 	    for (int i = 0; i < polygon.size(); i++){
